@@ -1,39 +1,44 @@
-<div>
-    <img src="/assets/images/IMG_1938.jpg" height="90px" width="90px" alt="" />
-    <h1>Eat-Da-Burger!</h1>
-</div>
-<div>
-    <h3>Burgers List to Devour</h3>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <div id="open">
-        <p>
-            {{id}}. {{burger_name}}
-            <button class="change-devoured" data-id="{{id}}">Devour it!</button>
-        </p>
+<div id="wrapper">
+    <div id="title">
+        <div id="image">
+        <img src="/assets/images/burger.gif" alt="" />
+        </div>
+        <h1>Eat-Da-Burger!</h1>
     </div>
-    {{/unless}}
-    {{/each}}
-</div>
-<div>
-    <h3>Burgers already Devoured</h3>
-    {{#each burgers}}
-    {{#if devoured}}
-    <div id="close">
-        <p>
-            {{id}}. {{burger_name}}
-        </p>
+    <div id="container">
+        <div id="uneaten">
+            {{!-- <h3>Burgers List to Devour</h3> --}}
+            {{#each burgers}}
+            {{#unless devoured}}
+            <div id="list">
+                <div id="open">
+                    {{id}}. {{burger_name}}
+                </div>
+                <div id="button">
+                <button class="change-devoured" data-id="{{id}}">Devour it!</button>
+                </div>
+            </div>
+            {{/unless}}
+            {{/each}}
+        </div>
+        <div id="eaten">
+            {{!-- <h3>Burgers already Devoured</h3> --}}
+            {{#each burgers}}
+            {{#if devoured}}
+            <div id="close">
+                    {{id}}. {{burger_name}}
+            </div>
+            {{/if}}
+            {{/each}}
+        </div>
     </div>
-    {{/if}}
-    {{/each}}
-</div>
-<form class="create-form">
-
-    <div class="form-group">
-        <input placeholder="Bring in a new one!" type="text" id="burger" name="burger_name" maxlength="255"
-            style="height:40px;width:200px;">
+    <div id="form">
+        <form class="create-form">
+            <div class="form-group">
+                <input placeholder="Bring in a new one!" type="text" id="burger" name="burger_name" maxlength="255">
+            </div>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+        <p>Enter a Burger you'd like to eat. Then click the "Submit" button.</p>
     </div>
-
-    <button type="submit">Submit</button>
-    <p>Enter a Burger you'd like to eat. Then click the "Submit" button.</p>
-</form>
+</div>
