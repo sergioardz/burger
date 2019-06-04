@@ -4,11 +4,11 @@ Homework Week 14
 ## Overview
 In this assignment, you'll create a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Be sure to follow the MVC design pattern; use Node and MySQL to query and route data in your app, and Handlebars to generate your HTML.
 
-### Bring your best burgers and try the site to devoure them!
+### Bring your best burgers and try the site to devour them!
 
 * [Eat-Da-Burger](https://secret-sierra-61841.herokuapp.com/)
 
-![PNG](public/assets/images/demo.png)
+![PNG](public/assets/images/Demo.png)
 
 ## Eat-Da-Burger details - What the project does  
 * Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.  
