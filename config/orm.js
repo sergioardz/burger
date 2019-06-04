@@ -12,13 +12,11 @@ var orm = {
 			cb(result);
 		});
 	},
-	insertOne: function (table, cols, vals, cb) {
+	insertOne: function (table, vals, cb) {
 		var queryString = "INSERT INTO " + table;
 
-		queryString += " (";
-		queryString += cols;
-		queryString += ") ";
-		queryString += "VALUES ('";
+		queryString += " (burger_name) VALUES ";
+		queryString += "('";
 		queryString += vals;
 		queryString += "') ";
 
@@ -32,12 +30,10 @@ var orm = {
 		});
 	},
 	// An example of objColVals would be {burger_name: cheeseburger, devoured: true}
-	updateOne: function (table, cols, condition, cb) {
+	updateOne: function (table, condition, cb) {
 		var queryString = "UPDATE " + table;
 
-		queryString += " SET ";
-		queryString += cols;
-		queryString += " WHERE ";
+		queryString += " SET devoured = true WHERE ";
 		queryString += condition;
 
 		console.log(queryString);
